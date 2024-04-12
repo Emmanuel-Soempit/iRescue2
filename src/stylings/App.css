@@ -1,0 +1,571 @@
+/* ================DASHBOARD=========== */
+.headerBack {
+  position: relative;
+  background-color: black;
+  height: 5rem;
+  padding: 0 2rem;
+  font-family: var(--poppinsFont);
+}
+.header {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 1.5rem;
+}
+
+.getatow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  background: #161b23;
+  padding: 0.3rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.getatow p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.downAngle {
+  width: 2rem;
+  height: 1.2rem;
+}
+.logo_icon_side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.logo_icon_side .logo {
+  width: 6rem;
+  height: auto;
+}
+.hamburger_icon,
+.take_tour_img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.closeIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.profile_img_side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.my_trips_text {
+  padding-left: 0.3rem;
+  padding-right: 1rem;
+  font-size: 1rem;
+}
+
+.profile_logo_img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.my_trips_logo_img {
+  width: 2rem;
+  height: 2rem;
+}
+kkk .dashBackground {
+  display: grid;
+  grid-template-columns: 27% 73%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.mainleft {
+  color: #000;
+  height: auto; /* Adjust as needed */
+  background: #ffff;
+  padding: 1rem 1rem 1rem 2rem;
+  position: relative;
+  font-family: var(--poppinsFont);
+  z-index: 6;
+}
+
+.mainleft.open {
+  left: 0;
+}
+
+.menuIcons {
+  cursor: pointer;
+  display: none;
+}
+
+.mainleft h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: #161b23;
+}
+
+.redDots img {
+  position: absolute;
+  left: 1rem;
+  top: 4.5rem;
+  width: auto;
+  height: 4.7rem;
+}
+.dashInputs img {
+  position: absolute;
+  right: 0.5rem;
+  top: 1.2rem;
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+.dashInputs {
+  margin-left: 0.5rem;
+  position: relative;
+}
+
+.dashInputs input {
+  font-weight: 500;
+  padding: 0 1.5rem 0 1rem;
+  font-size: 0.9rem;
+  width: 100%;
+  height: 2.5rem;
+  background: transparent;
+  color: #000;
+  margin: 0.5rem 0;
+}
+
+.searchRoute {
+  padding: 0.5rem 3rem;
+  font-size: 1rem;
+  background: var(--primary);
+  color: white;
+  border-radius: 10px;
+  border: none;
+  font-family: var(--poppinsFont);
+  margin: 0.8rem 0;
+}
+.proceedBtn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  font-family: var(--poppinsFont);
+  padding: 0.7rem 7rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 1.1rem;
+  margin-left: 1.5rem;
+}
+/* ============EXAMPLE======== */
+
+@media (max-width: 700px) {
+  .menuIcons {
+    display: block;
+  }
+}
+
+/* ========MODAL======= */
+.modal.show {
+  opacity: 1;
+}
+/* Existing Styles */
+
+.modal {
+  position: fixed;
+  width: 55rem;
+  height: 38rem;
+  z-index: 1040;
+  top: 6%;
+  left: 27%;
+  background-color: #f5f5f5;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.8s ease-in;
+}
+
+.modalContent {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  gap: 0;
+}
+
+.backdrop {
+  position: fixed;
+  z-index: 1040;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000;
+  opacity: 0.5;
+}
+
+.modalLeft {
+  background: #fff;
+  height: 100%;
+}
+.modalLeft img {
+  width: 8rem;
+  height: 18rem;
+  margin-top: 2rem;
+}
+
+.modal-desc {
+  padding: 12px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ============SUMMARY=========== */
+.orderSummary li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.4rem 0;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #e4e3e3;
+  padding-bottom: 0.5rem;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 70px;
+  aspect-ratio: 2;
+  --_g: no-repeat radial-gradient(circle closest-side, #000 90%, #0000);
+  background: var(--_g) 0% 50%, var(--_g) 50% 50%, var(--_g) 100% 50%;
+  background-size: calc(100% / 3) 50%;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {
+  20% {
+    background-position: 0% 0%, 50% 50%, 100% 50%;
+  }
+  40% {
+    background-position: 0% 100%, 50% 0%, 100% 50%;
+  }
+  60% {
+    background-position: 0% 50%, 50% 100%, 100% 0%;
+  }
+  80% {
+    background-position: 0% 50%, 50% 50%, 100% 100%;
+  }
+}
+
+/* .checkout-form h3 {
+  margin-bottom: 1rem;
+}
+.checkout-form div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.checkout-form input {
+  width: 70%;
+  height: 2rem;
+  margin: 0.5rem;
+} */
+
+/* ======DASHBOARD INNER MODAL================ */
+.carTypeContainer {
+  width: 46rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.carTypeContainer::-webkit-scrollbar,
+.dropdown-list::-webkit-scrollbar {
+  width: 5px;
+  height: 4px;
+}
+.carTypeContainer::-webkit-scrollbar-track,
+.dropdown-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  cursor: pointer;
+}
+.carTypeContainer::-webkit-scrollbar-thumb,
+.dropdown-list::-webkit-scrollbar-thumb {
+  background: #c0c4cc;
+  border-radius: 5px;
+}
+
+.carBox {
+  background: #ffffff;
+  width: 15rem;
+  height: 7rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.carBox img {
+  width: 6rem;
+  height: 6rem;
+}
+.carBox p {
+  color: #000000;
+  font-weight: 600;
+}
+.selected,
+.carBox:hover {
+  background: #c0c4cc;
+}
+
+/* =============CAR MAKE DROPDOWN========= */
+.carMakeContainer {
+  width: 100%;
+}
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-header {
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.arrow {
+  width: 2.4rem;
+  height: 1.5rem;
+  justify-content: flex-end;
+}
+
+.arrow.up {
+  transform: rotate(-178deg);
+}
+
+.arrow.down {
+  transform: rotate(45deg);
+}
+
+.dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 17rem;
+  height: 18rem;
+  overflow: auto;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.dropdown-list li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-list li:hover {
+  background-color: #f0f0f0;
+}
+.dColumn {
+  margin: 1.5rem 0 0 0;
+  display: grid;
+  grid-template-columns: 38% 57%;
+  gap: 5%;
+  padding: 0.5rem;
+}
+.carType {
+  padding: 0.5rem;
+}
+.carType h3 {
+  font-size: 1rem;
+  color: #989898;
+  margin: 0.3rem 0;
+}
+
+.carMakeContainer,
+.towTypeContainer {
+  margin: 2rem 0;
+  border-bottom: 1px solid #a7a6a8;
+  border-top: 1px solid #a7a6a8;
+  padding: 1rem 0;
+}
+.carMakeContainer h3,
+.towTypeContainer h3 {
+  font-size: 0.8rem;
+  color: #aba7a7;
+}
+.towTypes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.towTypes img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.paymentOptions {
+  width: 100%;
+  height: 12rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1rem;
+}
+.paymentType {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ebeef5;
+  width: 50%;
+}
+.payWith {
+  background-color: #fff;
+  width: 100%;
+  height: 6rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.payWith:hover {
+  background: #c0c4cc;
+}
+.selected {
+  background: #c0c4cc;
+}
+.payWith img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.payWith p {
+  color: #3c3c4399;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.micro {
+  border: 1.5px solid #c22120;
+  color: #161b23;
+  width: 100%;
+  height: auto;
+  padding: 0.4rem 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+/* .micro:hover,
+.selected {
+  background: #7c7b7b;
+  color: #000;
+} */
+.carSelect img,
+.micro img {
+  width: 3rem;
+  height: 3rem;
+}
+.micro img {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+.micro h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0.3rem 0;
+}
+.micro p {
+  font-size: 0.8rem;
+}
+.summary {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 3rem;
+}
+.nairaImage {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.summarySpan {
+  display: flex;
+  align-items: center;
+}
+.drivers {
+  padding: 0.5rem;
+}
+.drivers h4 {
+  font-size: 1.2rem;
+}
+.driver {
+  padding: 0.7rem;
+  width: 85%;
+  height: 6rem;
+  background: #f7f1f1;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.driverInfo {
+  margin-left: 0rem;
+}
+.driver img {
+  width: 4.7rem;
+  height: 4.7rem;
+  border-radius: 50%;
+}
+.listedService {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.listedService img {
+  width: 2rem;
+  height: 2rem;
+}
+.listedService h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+/* .autocomplete-dropdown-container {
+  border-radius: 5px; 
+  background-color: #f2efe9; 
+  padding: 1rem;
+}
+
+.autocomplete-dropdown-container > div {
+  margin: 5px 0; 
+}
+ */
+.vehicleServices {
+  margin-top: 2.5rem;
+}
+.listedService {
+  margin-top: 2rem;
+}

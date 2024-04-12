@@ -1,0 +1,577 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  --primary: #e61717;
+  --primarLight: #e61717;
+  --transition: 0.3s ease-in;
+  --poppinsFont: "Poppins", sans-serif;
+  --manropeFont: "Manrope", sans-serif;
+  --montserratFont: "Montserrat", sans-serif;
+  --mobile: 700px;
+}
+
+.header {
+  min-height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../assets/images/damagedCars.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.heroEllipse {
+  width: 120px;
+  height: 10px;
+  position: absolute;
+  top: 60%;
+  left: 40%;
+  opacity: 0.7;
+  background-color: #ab2b28;
+  border-radius: 50%;
+  box-shadow: 10px 5px 150px 150px #ab2b28;
+  z-index: -1;
+}
+
+.headerText {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding-top: 5rem;
+  z-index: 4;
+  position: relative;
+}
+
+.headerText h1 {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffff;
+}
+
+.headerText p {
+  color: #ffff;
+  text-transform: capitalize;
+  font-size: 1.8rem;
+  text-align: center;
+  z-index: 5;
+  margin-bottom: 8rem;
+}
+
+/* =======================HEADER MEDIA TABLET=================== */
+@media (max-width: 1200px) {
+  .headerText {
+    width: 100%;
+    padding-top: 10rem;
+  }
+  .headerText h1 {
+    font-size: 3rem;
+  }
+}
+
+/* ==============HEADER MEDIA MOBILE============== */
+@media (max-width: 700px) {
+  .heroEllipses {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    height: 5rem;
+    width: 12rem;
+    opacity: 0.6;
+  }
+
+  .headerText {
+    width: 95%;
+  }
+
+  .headerText h1 {
+    font-size: 1.7rem;
+  }
+
+  .headerText p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+}
+
+.navlinks li a {
+  color: black;
+}
+
+/* =================UBSCRIPTION CARDS=============== */
+
+.subcriptionTop {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.subcriptionTop li a {
+  font-size: 1.4rem;
+  color: #000;
+  cursor: pointer;
+}
+
+.subscriptionBack {
+  background: #fafafa;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 4rem;
+}
+.subscriptionCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-family: var(--poppinsFont);
+  gap: 2rem;
+}
+
+.subscriptionSmall {
+  display: none;
+}
+
+.subcard ul img {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+.subcard ul li {
+  display: flex;
+  align-items: center;
+  margin: 0.8rem 0;
+  font-size: 1.2rem;
+}
+
+.subcard ul span {
+  width: 1rem;
+  height: 1rem;
+  background: #e6171757;
+  padding: 0.9rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subcard {
+  background: #ffff;
+  padding: 1.4rem 2rem;
+  border: 1px solid #bebebe;
+  border-radius: 20px;
+  width: 22rem;
+  position: relative;
+  margin-bottom: 5rem;
+}
+
+.subcard div {
+  background: #fef9ee;
+  border: 1px solid #ffc727;
+  border-radius: 20px;
+  padding: 0.2rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  position: absolute;
+  top: -1rem;
+}
+
+.subcard h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.subcard h4 {
+  display: flex;
+  margin: 0.5rem 0;
+  align-items: center;
+  font-size: 1.1rem;
+}
+.subcard h4 img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.subcard p {
+  color: #726c6c;
+  font-size: 0.9rem;
+}
+
+.subcard button {
+  padding: 0.6rem 5rem;
+  font-size: 1.35rem;
+  border: none;
+  border-radius: 15px;
+  margin-top: 1.6rem;
+}
+
+.subcard:first-child button,
+.subcard:nth-child(2) button {
+  background: #d9d9d9;
+  transition: var(--transition);
+}
+
+.subcard:first-child button:hover,
+.subcard:nth-child(2) button:hover {
+  background-color: #e61717;
+  color: #ffff;
+}
+
+.subcard:last-child button {
+  background-color: #e61717;
+  color: #ffff;
+  transition: var(--transition);
+}
+
+.subcard:first-child button {
+  margin-top: 14.5rem;
+}
+
+/* ==========SUBSCRIPTION CARDS MEDIA========== */
+@media (max-width: 700px) {
+  .subcriptionTop {
+    margin-bottom: 1.5rem;
+  }
+
+  .subcriptionTop li a {
+    font-size: 1rem;
+  }
+  .subscriptionCards {
+    display: none;
+  }
+  .subscriptionSmall {
+    display: block;
+    position: relative;
+  }
+  .subscriptionBack {
+    background: #fafafa;
+    width: 100vw;
+    height: 70vh;
+    padding: 3rem 0;
+  }
+  .subcard ul img {
+    width: 0.6rem;
+    height: 0.6rem;
+  }
+  .subcard ul li {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+  }
+  .subcard ul span {
+    width: 0.7rem;
+    height: 0.7rem;
+    padding: 0.7rem;
+    margin-right: 0.5rem;
+  }
+  .subcard {
+    top: 1rem;
+    padding: 1rem;
+    border-radius: 20px;
+    width: 18rem;
+    margin: 0 auto;
+  }
+  .subcard div {
+    padding: 0.2rem 0.7rem;
+    font-size: 0.7rem;
+    top: -1rem;
+  }
+  .subcard h2 {
+    margin-bottom: 0.3rem;
+    font-size: 1.2rem;
+  }
+  .subcard h4 {
+    font-size: 1rem;
+  }
+  .subcard button {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    font-weight: 600;
+  }
+  .noSpace ul {
+    margin-bottom: -12rem;
+  }
+
+  .space button {
+    margin-top: -6rem;
+  }
+}
+
+/* =====================CONTACT US ==================== */
+
+.contactBack {
+  width: 100vw;
+  height: 25rem;
+  background: #000000;
+  color: #ffff;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem 0;
+}
+
+.contact div:first-child {
+  width: 50%;
+}
+
+.contact h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact p {
+  font-size: 1rem;
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+.contact p span:first-child {
+  color: var(--primarLight);
+}
+
+.contact input {
+  background: #3b3a3a;
+  width: 30rem;
+  height: 4.2rem;
+  border: none;
+  padding: 0 1rem;
+  font-size: 1.4rem;
+  color: #ffff;
+}
+
+.contact img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.contact div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.contact div:nth-child(2) span {
+  background: #e61717;
+  width: 4rem;
+  height: 4.2rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact p span:nth-child(2) {
+  color: #ffff;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* =======================CONTACT US MEDIA TABLET=================== */
+@media (max-width: 1200px) {
+  .contactBack {
+    height: 38rem;
+  }
+  .contact {
+    flex-direction: column;
+    padding: 4rem;
+  }
+  .contact div:first-child {
+    width: 100%;
+    text-align: justify;
+  }
+  .contact h3 {
+    font-weight: 600;
+  }
+  .contact p {
+    font-size: 1.3rem;
+    line-height: 1.7;
+    font-weight: 400;
+  }
+  .contact p span:nth-child(2) {
+    font-weight: 500;
+    font-size: 2rem;
+  }
+  .contact div:nth-child(2) {
+    width: 100%;
+    margin-top: 3rem;
+  }
+  .contact div:nth-child(2) span {
+    width: 5rem;
+    height: 5rem;
+  }
+  .contact input {
+    width: 35rem;
+    height: 5rem;
+    font-size: 1.6rem;
+  }
+}
+/* =================CONTACT US MEDIA MOBILE============ */
+@media (max-width: 700px) {
+  .contactBack {
+    height: 25rem;
+  }
+  .contact {
+    padding: 3rem 1.8rem;
+  }
+  .contact h3 {
+    font-size: 1.7rem;
+    font-weight: 600;
+  }
+  .contact p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+  .contact p span:first-child {
+    font-size: 1rem;
+  }
+  .contact p span:nth-child(2) {
+    font-size: 1.3rem;
+  }
+
+  .contact div:nth-child(2) span {
+    width: 4rem;
+    height: 3.2rem;
+    padding: 1rem;
+  }
+  .contact input {
+    width: 100%;
+    height: 3.2rem;
+    font-size: 1rem;
+  }
+}
+
+/* ====================HOW THE APP WORKS=========== */
+.howTheAppWorks {
+  padding: 60px 0;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  font-family: "Poppins", sans-serif;
+  text-align: justify;
+  font-family: var(--poppinsFont);
+  height: 100vh;
+}
+
+.appLeft div {
+  width: 50rem;
+  height: 48rem;
+  margin-left: -7rem;
+  margin-top: -3rem;
+}
+
+.appRight {
+  width: 90%;
+}
+
+.appRight h3 {
+  font-size: 2.2rem;
+  margin-left: -2.5rem;
+  margin-bottom: 1rem;
+}
+
+.topParagraph {
+  margin-left: -2.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.orderedList {
+  margin-left: -2.5rem;
+}
+.orderedList p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-weight: 400;
+  margin-left: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.orderedList li {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #5b5757;
+  margin: 0.3rem 0;
+  display: flex;
+  align-items: center;
+}
+
+/* =======================CONTACT US MEDIA TABLET=================== */
+@media (max-width: 1200px) {
+  .howTheAppWorks {
+    grid-template-columns: 100%;
+    height: auto;
+  }
+  .appLeft div {
+    width: 60rem;
+    height: 100%;
+    margin-left: -4rem;
+    margin-top: -2rem;
+  }
+  .appRight {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .appRight h3 br {
+    display: none;
+  }
+  .appRight h3 {
+    font-weight: bold;
+    font-size: 2.7rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* ====================HOW THE APP WORKS MEDIA=========== */
+@media (max-width: 700px) {
+  .appLeft div {
+    width: 34rem;
+    margin-left: -5rem;
+  }
+
+  .appRight {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .appRight h3 br {
+    display: none;
+  }
+  .appRight h3 {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+
+  .topParagraph {
+    margin-left: 0;
+    font-weight: 400;
+    font-size: 0.8rem;
+  }
+
+  .ordered_list p {
+    font-size: 0.7rem;
+    line-height: 1.3;
+    margin-left: 2rem;
+  }
+  .ordered_list li {
+    font-size: 1rem;
+  }
+
+  .ordered_list li {
+    margin-bottom: 5px;
+  }
+
+  .ordered_list li::before {
+    width: 0.1rem;
+    height: 0.1rem;
+    padding: 0.2rem 0.6rem;
+
+    margin-right: 6px;
+    margin-left: 0;
+  }
+}
