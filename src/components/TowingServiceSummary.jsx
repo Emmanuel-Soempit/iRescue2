@@ -64,16 +64,7 @@ export default function Summary({
             maximumFractionDigits: 2,
           })}
         </span>
-      ),
-      info: (
-        <span className="summarySpan">
-          <img src={naira} alt="Naira" className="nairaImage" />{" "}
-          {selectedOptions.totalPrice.toLocaleString(undefined, {
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 2,
-          })}
-        </span>
-      ),
+      )
     },
   ];
 
