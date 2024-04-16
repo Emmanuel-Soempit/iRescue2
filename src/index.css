@@ -1227,6 +1227,17 @@ h3 {
   margin-left: 3.5rem;
 }
 
+.priBtn{
+  background: rgb(127, 126, 126);
+  color: black;
+  padding: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.6;
+  font-size: small;
+ 
+}
+
 /* =============FOOTER MEDIA TABLET=============== */
 @media (max-width: 1200px) {
   .footerBack {
@@ -1412,6 +1423,7 @@ h3 {
     width: 25rem;
     margin-left: -1.7rem;
   }
+ 
   .company {
     margin-left: 0;
   }

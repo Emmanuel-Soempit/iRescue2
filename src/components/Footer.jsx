@@ -11,6 +11,7 @@ import phoneTrigger from "../phoneTrigger.json";
 import appgallerySmall from "../assets/images/appgallerySmall.svg";
 import appstoreSmall from "../assets/images/appstoreSmall.svg";
 import playstoreSmall from "../assets/images/playstoreSmall.svg";
+import {useNavigate} from 'react-router-dom'
 
 export default function Footer() {
   const phoneNumber = "+2342013306046";
@@ -19,6 +20,8 @@ export default function Footer() {
     const telLink = `tel:${phoneNumber}`;
     window.location.href = telLink;
   };
+
+  const navigate = useNavigate()
 
   const handleEmailClick = () => {
     const userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -246,10 +249,10 @@ export default function Footer() {
         </div>
         <div className="privacyPolicy">
           <div>
-            <a href="#">Privacy Policy</a>
+            <a href="/privacy_policy" className="priBtn" >Privacy Policy</a>
           </div>
           <div>
-            <a href="#">Terms and Conditions</a>
+            <a href="/terms_and_conditions" className="priBtn"  >Terms and Conditions</a >
           </div>
         </div>
       </div>
