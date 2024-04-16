@@ -634,12 +634,18 @@ ul {
 @media (max-width: 700px) {
   .grid {
     grid-template-columns: 100%;
+    
   }
+
   .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
     padding-top: 2rem;
     margin-bottom: 4rem;
   }
+
   .left h3 {
     font-size: 1.4rem;
   }
@@ -651,6 +657,7 @@ ul {
     height: 100%;
     margin-left: 0.5rem;
   }
+
   .right {
     margin-left: 0;
   }
