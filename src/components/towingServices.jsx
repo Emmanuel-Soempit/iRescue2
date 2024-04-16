@@ -4,6 +4,7 @@ import CarTowingTab from "../components/CarTowingTab";
 import AmbulanceTab from "./AmbulanceTab";
 import IrezoneTab from "./IrezoneTab";
 import { useState } from "react";
+import '../stylings/dashboard.css'
 
 export default function TowingServices() {
   const [activeTab, setActiveTab] = useState(1);
@@ -31,7 +32,7 @@ export default function TowingServices() {
               <p>Towing Services</p>
               <h3>Earn Money With iRescue</h3>
               <div className="leftImg">
-                <img src={towingServiceCar} />
+                <img className="img" src={towingServiceCar} />
               </div>
             </div>
           </Slide>

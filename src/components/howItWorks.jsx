@@ -3,7 +3,7 @@ import secondImg from "../assets/images/second.png";
 import thirdImg from "../assets/images/third.png";
 import fourthImg from "../assets/images/fourth.png";
 import { Slide, Bounce } from "react-awesome-reveal";
-import '../stylings/dashboard.css'
+
 
 export default function HowItWorks() {
   const contents = [
@@ -37,18 +37,13 @@ export default function HowItWorks() {
         </div>
       </Slide>
 
-      <div className="cards" style={{
-        height: '60vh'
-      }}>
+      <div className="cards">
         <Bounce cascade damping={0.3} duration={2000}>
           {contents.map((content, index) => {
             return (
               <div className="card" key={index}>
                 <div className="cardImg">
-                  <img className="img" style={{
-                    height: '100px',
-                    width: '80%'
-                  }} src={content.image} />
+                  <img src={content.image} />
                 </div>
                 <h3>{content.title}</h3>
                 <p>{content.info}</p>
