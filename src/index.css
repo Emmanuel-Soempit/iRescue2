@@ -18,10 +18,7 @@ body {
   font-family: var(--poppinsFont);  
 }
 
-html,
-body {
-  overflow-x: hidden;
-}
+
 
 .center {
   display: flex;
