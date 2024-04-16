@@ -641,7 +641,6 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: red;
     height: 40vh;
     text-align: center;
     padding: 2rem;
