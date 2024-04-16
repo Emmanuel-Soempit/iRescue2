@@ -641,7 +641,7 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: white;
+    background-color: #fff;
     height: 40vh;
     text-align: center;
     padding: 2rem;
