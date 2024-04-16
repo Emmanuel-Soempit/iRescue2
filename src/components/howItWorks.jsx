@@ -37,13 +37,18 @@ export default function HowItWorks() {
         </div>
       </Slide>
 
-      <div className="cards">
+      <div className="cards" style={{
+        height: '60vh'
+      }}>
         <Bounce cascade damping={0.3} duration={2000}>
           {contents.map((content, index) => {
             return (
               <div className="card" key={index}>
                 <div className="cardImg">
-                  <img className="img" src={content.image} />
+                  <img className="img" style={{
+                    height: '100px',
+                    width: '80%'
+                  }} src={content.image} />
                 </div>
                 <h3>{content.title}</h3>
                 <p>{content.info}</p>
