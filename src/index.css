@@ -634,7 +634,7 @@ ul {
 @media (max-width: 700px) {
   .grid {
     grid-template-columns: 100%;
-    
+    background-color: 'black'
   }
 
   .left {
@@ -643,6 +643,7 @@ ul {
     justify-content: center;
     text-align: center;
     padding-top: 2rem;
+    background-color: w;
     margin-bottom: 4rem;
   }
 
