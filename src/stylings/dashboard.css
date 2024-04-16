@@ -15,6 +15,10 @@
   font-size: 1.5rem;
 }
 
+.img {
+  object-fit: contain;
+}
+
 .getatow {
   display: flex;
   justify-content: center;
@@ -37,6 +41,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  object-fit: contain;
   gap: 2rem;
 }
 

@@ -3,6 +3,7 @@ import secondImg from "../assets/images/second.png";
 import thirdImg from "../assets/images/third.png";
 import fourthImg from "../assets/images/fourth.png";
 import { Slide, Bounce } from "react-awesome-reveal";
+import '../stylings/dashboard.css'
 
 export default function HowItWorks() {
   const contents = [
@@ -42,7 +43,7 @@ export default function HowItWorks() {
             return (
               <div className="card" key={index}>
                 <div className="cardImg">
-                  <img src={content.image} />
+                  <img className="img" src={content.image} />
                 </div>
                 <h3>{content.title}</h3>
                 <p>{content.info}</p>

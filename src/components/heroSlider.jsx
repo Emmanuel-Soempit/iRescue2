@@ -5,6 +5,7 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination } from "swiper/modules";
 
 import HeroImg2 from "../assets/images/heroImg2.png";
+import '../stylings/dashboard.css'
 
 export default function HeroSlider() {
   return (
@@ -25,13 +26,13 @@ export default function HeroSlider() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src={HeroImg2} />
+          <img className="img" src={HeroImg2} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={HeroImg2} />
+          <img className="img"  src={HeroImg2} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={HeroImg2} />
+          <img className="img"  src={HeroImg2} />
         </SwiperSlide>
       </Swiper>
     </>

@@ -10,6 +10,8 @@ import Register from "./pages/Register";
 import OtpVerification from "./pages/otpVerification";
 import PageHelmet from "./Helmet";
 import { HelmetProvider } from "react-helmet-async";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
 
 export default function App() {
   return (
@@ -21,6 +23,8 @@ export default function App() {
           <Routes>
             <Route index exact element={<Home />} />
             <Route path="/Home" element={<Home />} />
+            <Route path="/privacy_policy" element={<Privacy />} />
+            <Route path="/terms_and_conditions" element={<Terms />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/subscription" element={<Subscription />} />
             <Route path="/Login" element={<Login />} />
