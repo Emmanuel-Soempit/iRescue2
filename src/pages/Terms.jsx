@@ -42,7 +42,7 @@ function Terms() {
 
         </div>
 
-        <div style={{backgroundColor: 'black', width: '100vw', height: '60vh', padding: '10px'}}>
+        <div style={{backgroundColor: 'black', width: '100vw', height: '100vh', padding: '10px'}}>
 
         <Footer/>
         </div>
